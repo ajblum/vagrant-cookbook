@@ -57,7 +57,7 @@ node['vagrant']['plugins'].each do |plugin_config|
     check += "(#{config[:version]}" if config[:version]
     execute cmd do
       command cmd
-      not_if "vagrant plugin list | grep \"#{check}\"" , :user => 'ablum'
+      not_if "vagrant plugin list | grep \"#{check}\"asdfdsfa" , :user => 'ablum'
     end
   end
 end
