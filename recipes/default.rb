@@ -53,7 +53,7 @@ node['vagrant']['plugins'].each do |plugin_config|
   plugin_config.each_pair do |plugin, config|
     cmd = "vagrant plugin install #{plugin}"
     cmd += " --plugin-version #{config[:version]}" if config[:version]
-    check = plugin
+    check = #{plugin}
     check += " (#{config[:version]}" if config[:version]
     execute cmd do
       command cmd
