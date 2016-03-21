@@ -54,7 +54,7 @@ node['vagrant']['plugins'].each do |plugin_config|
     cmd = "vagrant plugin install #{plugin}"
     cmd += " --plugin-version #{config[:version]}" if config[:version]
     check = plugin
-    check += " (#{config[:version]})" if config[:version]
+    check += " (#{config[:version]}" if config[:version]
     execute cmd do
       command cmd
       not_if "vagrant plugin list | grep \"#{check}\""
